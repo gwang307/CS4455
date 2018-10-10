@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-10-10T18:02:28.401-04:00
+  lastUpdatedAtString: 2018-10-10T18:12:19.281-04:00
   initializedAtString: 2018-10-10T17:27:23.034-04:00
   currentGitRemote:
     name: origin
@@ -34,4 +34,4 @@ MonoBehaviour:
   currentConfigRemote:
     name: origin
     url: https://github.com/gwang307/CS4455.git
-  currentHead: a3c923f
+  currentHead: d03c859
