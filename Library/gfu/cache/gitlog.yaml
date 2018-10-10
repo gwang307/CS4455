@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2018-10-10T17:37:28.135-04:00
+  initializedAtString: 2018-10-10T17:27:33.189-04:00
+  log:
+  - commitID: a3c923f3338b4c64fdbd07aff0c93148731d5db4
+    mergeA: 
+    mergeB: 
+    authorName: gwang307
+    authorEmail: Gwang307@gatech.edu
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Initial commit
+    description: Initial commit
+    timeString: 2018-10-10T16:51:16.000-04:00
+    commitTimeString: 2018-10-10T16:51:16.000-04:00
+    changes:
+    - path: README.md
+      fullPath: /Users/george/Documents/CS4455/CS4455/README.md
+      projectPath: README.md
+      originalPath: 
+      status: 4
+      staged: 0
