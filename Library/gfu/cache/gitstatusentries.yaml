@@ -12,48 +12,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-10-10T18:30:11.554-04:00
-  initializedAtString: 2018-10-10T17:27:27.719-04:00
-  entries:
-  - path: .gitignore
-    fullPath: /Users/george/Documents/CS4455/CS4455/.gitignore
-    projectPath: .gitignore
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library/gfu/cache/branches.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/branches.yaml
-    projectPath: Library/gfu/cache/branches.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library/gfu/cache/gitlog.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/gitlog.yaml
-    projectPath: Library/gfu/cache/gitlog.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library/gfu/cache/gitstatusentries.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/gitstatusentries.yaml
-    projectPath: Library/gfu/cache/gitstatusentries.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library/gfu/cache/gittrackingstatus.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/gittrackingstatus.yaml
-    projectPath: Library/gfu/cache/gittrackingstatus.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library/gfu/cache/gituser.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/gituser.yaml
-    projectPath: Library/gfu/cache/gituser.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library/gfu/cache/repoinfo.yaml
-    fullPath: /Users/george/Documents/CS4455/CS4455/Library/gfu/cache/repoinfo.yaml
-    projectPath: Library/gfu/cache/repoinfo.yaml
-    originalPath: 
-    status: 3
-    staged: 0
+  lastUpdatedAtString: 2018-10-28T14:10:46.522-04:00
+  initializedAtString: 2018-10-28T14:09:02.571-04:00
+  entries: []
