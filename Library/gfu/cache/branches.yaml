@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2018-10-10T18:12:19.127-04:00
-  initializedAtString: 2018-10-10T17:36:16.741-04:00
+  lastUpdatedAtString: 2018-10-29T12:21:42.504-04:00
+  initializedAtString: 2018-10-28T14:16:52.161-04:00
   localBranches:
   - name: master
     tracking: origin/master
+  - name: nikki
+    tracking: 
   remoteBranches:
   - name: origin/HEAD
     tracking: '[None]'
@@ -33,12 +35,18 @@ MonoBehaviour:
   localConfigBranches:
     keys:
     - master
+    - nikki
     values:
     - name: master
       remote:
         name: origin
         url: https://github.com/gwang307/CS4455.git
       trackingBranch: master
+    - name: nikki
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
   remoteConfigBranches:
     keys:
     - origin
