@@ -11,6 +11,7 @@ public class Collector : MonoBehaviour {
 	public void ReceiveCollectible(int collectibleScore) {
 		score += collectibleScore;
 		scoreUI.scoreText.text = roundScore(score);
+		
 	}
 
 	String roundScore(int score) {

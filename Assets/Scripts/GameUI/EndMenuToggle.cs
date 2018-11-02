@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
+//using UnityStandardAssets.Characters.ThirdPerson;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class EndMenuToggle : MonoBehaviour {
@@ -16,12 +16,14 @@ public class EndMenuToggle : MonoBehaviour {
 	private int new_high_score;
 	private int display_score;
 	private int display_high_score;
+	private float countDown;
 
 	void Awake() {
+		countDown = 180f;
 		canvasGroup = GetComponent<CanvasGroup>();
 		if (canvasGroup == null)
 			Debug.LogError("Required canvas group component is missed.", canvasGroup);
-		collector = GameObject.Find("SomeDude_RootMotion");
+		collector = GameObject.Find("MC2");
 		timer = GetComponent<Timer>();
 	}
 
@@ -61,11 +63,11 @@ public class EndMenuToggle : MonoBehaviour {
 		canvasGroup.interactable = true;
 		canvasGroup.blocksRaycasts = true;
 		canvasGroup.alpha = 1f;
-		collector.GetComponent<ThirdPersonUserControl>().enabled = false;
+		collector.GetComponent<SimpleCharacterControl>().enabled = false;
 
 		// Calculate & Assign Scores
 		float timePassed = timer.timePassed;
-		float timeBonus = Mathf.Max((15f - timePassed), 0f) * 100f;
+		float timeBonus = Mathf.Max((countDown - timePassed), 0f) * 100f;
 		int timeBonusInt = Mathf.RoundToInt(timeBonus);
 
 		int curr_high_score = PlayerPrefs.GetInt("high_score", 0);

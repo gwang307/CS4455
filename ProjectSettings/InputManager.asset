@@ -293,7 +293,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 0
-<<<<<<< HEAD
   - serializedVersion: 3
     m_Name: Pause
     descriptiveName: 
@@ -310,5 +309,3 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 0
-=======
->>>>>>> 7ba585a9a0ac89235ff0b9c237ef46bb913f65b5

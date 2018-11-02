@@ -20,9 +20,10 @@ public class VerticallyMovingCoins : MonoBehaviour {
 		else if (this.transform.position.y <= lowerBound)
 			movingUp = true;
 
-		if (movingUp)
+		if (movingUp) {
 			this.transform.Translate(new Vector3(-Time.deltaTime * verticalSpeed, 0, 0));
-		else
+		} else {
 			this.transform.Translate(new Vector3(Time.deltaTime * verticalSpeed, 0, 0));
+		}
 	}
 }
