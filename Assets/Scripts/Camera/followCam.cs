@@ -19,7 +19,7 @@ public class followCam : MonoBehaviour
         float desiredAngle = target.transform.eulerAngles.y;
         Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
 
-        transform.position = target.transform.position - (rotation * offset);
+        transform.position = target.transform.position + new Vector3(0, 5, 0) - (rotation * offset);
         transform.LookAt(target.transform);
     }
 }
