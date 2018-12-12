@@ -21,7 +21,7 @@ public class EndMenuToggle : MonoBehaviour {
 	private Canvas countdownCanvas;
 
 	void Awake() {
-		countDown = 180f;
+		countDown = 60f;
 		canvasGroup = GetComponent<CanvasGroup>();
 		if (canvasGroup == null)
 			Debug.LogError("Required canvas group component is missed.", canvasGroup);

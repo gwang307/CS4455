@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		countDown = 180f;
+		countDown = 60f;
 		countdownText = GameObject.Find("CountdownText").GetComponent<Text>();
 	}
 	
