@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 //using UnityStandardAssets.Characters.ThirdPerson;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -19,6 +20,7 @@ public class EndMenuToggle : MonoBehaviour {
 	private float countDown;
 	private bool gameEnded;
 	private Canvas countdownCanvas;
+	public PostProcessingBehaviour main_camera_ppb;
 
 	void Awake() {
 		countDown = 60f;
@@ -74,6 +76,7 @@ public class EndMenuToggle : MonoBehaviour {
 		canvasGroup.alpha = 1f;
 		collector.GetComponent<SimpleCharacterControl>().enabled = false;
 		collector.GetComponent<Animator>().enabled = false;
+		main_camera_ppb.enabled = !main_camera_ppb.enabled;
 
 		// Calculate & Assign Scores
 		float timePassed = timer.timePassed;
