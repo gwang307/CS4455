@@ -411,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 516674515}
   - {fileID: 1703404905}
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 652679662}
   - {fileID: 2066577871}
@@ -1648,6 +1650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1327816011}
   - {fileID: 888697716}
@@ -2715,6 +2718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1996036124}
   - {fileID: 307570640}
@@ -4405,6 +4409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 934960011}
   - {fileID: 1329183110}
@@ -4640,6 +4645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1996036124}
   - {fileID: 307570640}
@@ -4684,6 +4690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1896355359}
   - {fileID: 1844896246}
@@ -6250,6 +6257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1327816011}
   - {fileID: 888697716}
@@ -8098,6 +8106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 516674515}
   - {fileID: 1703404905}
@@ -9617,6 +9626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 934960011}
   - {fileID: 1329183110}
@@ -9646,6 +9656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 652679662}
   - {fileID: 2066577871}
@@ -10642,6 +10653,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 154160, guid: d1f03074e612bbd4b84736d2d7aee882,
     type: 2}
   m_PrefabInternal: {fileID: 221063908}
+--- !u!65 &1676373223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1676373222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1676373224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1676373222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ea8a4d0c1684ceea1b7f950f98b4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1676373227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12903,6 +12937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 208788685}
+  zombieSound: {fileID: 0}
   waypoints:
   - {fileID: 1896355359}
   - {fileID: 1844896246}
