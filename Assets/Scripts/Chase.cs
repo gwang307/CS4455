@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Chase : MonoBehaviour {
 
     public Transform player;
+    Collector collector;
     //private NavMeshAgent nma;
     static Animator anim;
 
@@ -32,6 +33,7 @@ public class Chase : MonoBehaviour {
         anim = GetComponent<Animator>();
         //nma = GetComponent<NavMeshAgent>();
         SetNextWaypoint();
+        collector = GameObject.Find("MC2").GetComponent<Collector>();
 	}
 	
 	// Update is called once per frame
@@ -56,6 +58,8 @@ public class Chase : MonoBehaviour {
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isWalking", false);
                 player.position = new Vector3(-136.98f, 8, 169.3f);
+                collector.score = Mathf.Max(collector.score - 500, 0);
+                collector.updateScoreUI();
             }
         }
         // player far; chase balls
