@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Chase : MonoBehaviour {
 
     public Transform player;
+    Collector collector;
     //private NavMeshAgent nma;
     static Animator anim;
     public AudioSource zombieSound;
@@ -39,6 +40,7 @@ public class Chase : MonoBehaviour {
         zombieSound = GetComponent<AudioSource>();
         //nma = GetComponent<NavMeshAgent>();
         SetNextWaypoint();
+        collector = GameObject.Find("MC2").GetComponent<Collector>();
 	}
 	
 	// Update is called once per frame
@@ -70,6 +72,10 @@ public class Chase : MonoBehaviour {
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isWalking", false);
                 Invoke("changePos", 0f);
+                player.position = new Vector3(-136.98f, 12, 169.3f);
+                collector.score = Mathf.Max(collector.score - 500, 0);
+                collector.updateScoreUI();
+                
             }
         }
         // player far; chase balls

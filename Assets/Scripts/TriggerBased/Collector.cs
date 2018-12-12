@@ -6,19 +6,23 @@ using UnityEngine.UI;
 
 public class Collector : MonoBehaviour {
 	public int score;
-	public ScoreUI scoreUI;
+	ScoreUI scoreUI;
     public AudioSource coinSound;
 
 	void Start() {
 		score = 0;
+		scoreUI = GameObject.Find("ScoreText").GetComponent<ScoreUI>();
 		coinSound = GetComponent<AudioSource>();
 	}
 
 	public void ReceiveCollectible(int collectibleScore) {
 		score += collectibleScore;
-		scoreUI.scoreText.text = roundScore(score);
+		updateScoreUI();
         coinSound.Play();
+	}
 
+	public void updateScoreUI() {
+		scoreUI.scoreText.text = roundScore(score);
 	}
 
 	String roundScore(int score) {
