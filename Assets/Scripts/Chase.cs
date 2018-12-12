@@ -62,7 +62,7 @@ public class Chase : MonoBehaviour {
             {
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isWalking", false);
-                player.position = new Vector3(-136.98f, 8, 169.3f);
+                player.position = new Vector3(-136.98f, 12, 169.3f);
             }
         }
         // player far; chase balls
