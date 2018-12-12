@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+
 
 //[RequireComponent(typeof(NavMeshAgent))]
 public class Chase : MonoBehaviour {
@@ -13,6 +15,9 @@ public class Chase : MonoBehaviour {
 
     public GameObject[] waypoints;
     public int currWaypoint = -1;
+    //public Image damageImage;
+    //public float flashSpeed = 1f;
+    //public Color flashColour = new Color(255f, 255f, 255f, 1f);
 
     private void SetNextWaypoint()
     {
@@ -60,9 +65,11 @@ public class Chase : MonoBehaviour {
             }
             else
             {
+                //damageImage.color = flashColour;
+                //damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isWalking", false);
-                player.position = new Vector3(-136.98f, 12, 169.3f);
+                Invoke("changePos", 0f);
             }
         }
         // player far; chase balls
@@ -81,5 +88,10 @@ public class Chase : MonoBehaviour {
             //anim.SetFloat("vely", nma.velocity.magnitude / nma.speed);
         }
 
+    }
+
+    void changePos() {
+        //damageImage.color = new Color(255f, 255f, 255f, 0f);
+        player.position = new Vector3(-136.98f, 11, 169.3f);
     }
 }
