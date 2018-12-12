@@ -12755,6 +12755,11 @@ Prefab:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223905471267814540, guid: 9276760a3267e494bae2677ee509065d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114486611741747898, guid: 9276760a3267e494bae2677ee509065d, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9276760a3267e494bae2677ee509065d, type: 2}
