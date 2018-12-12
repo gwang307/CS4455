@@ -17,6 +17,7 @@ public class EndMenuToggle : MonoBehaviour {
 	private int display_score;
 	private int display_high_score;
 	private float countDown;
+	private bool gameEnded;
 
 	void Awake() {
 		countDown = 180f;
@@ -25,6 +26,7 @@ public class EndMenuToggle : MonoBehaviour {
 			Debug.LogError("Required canvas group component is missed.", canvasGroup);
 		collector = GameObject.Find("MC2");
 		timer = GetComponent<Timer>();
+		gameEnded = false;
 	}
 
 	// Use this for initialization
@@ -33,37 +35,42 @@ public class EndMenuToggle : MonoBehaviour {
 	}
 
 	void Update() {
-		if (display_high_score < display_score) {
-			if (display_high_score < new_high_score - 50)
-				display_high_score += 50;
-			else
-				display_high_score = new_high_score;
-		} else if (display_score < display_high_score) {
-			if (display_score < new_result_score - 50)
-				display_score += 50;
-			else
-				display_score = new_result_score;
-		} else {
-			if (display_high_score < new_high_score - 50)
-				display_high_score += 50;
-			else
-				display_high_score = new_high_score;
-			if (display_score < new_result_score - 50)
-				display_score += 50;
-			else
-				display_score = new_result_score;
+		if (gameEnded) {
+			if (display_high_score < display_score) {
+				if (display_high_score < new_high_score - 50)
+					display_high_score += 50;
+				else
+					display_high_score = new_high_score;
+			} else if (display_score < display_high_score) {
+				if (display_score < new_result_score - 50)
+					display_score += 50;
+				else
+					display_score = new_result_score;
+			} else {
+				if (display_high_score < new_high_score - 50)
+					display_high_score += 50;
+				else
+					display_high_score = new_high_score;
+				if (display_score < new_result_score - 50)
+					display_score += 50;
+				else
+					display_score = new_result_score;
+			}
+			scoreUI.scoreText.text = roundScore(display_score);
+			endHighScoreUI.scoreText.text = "HIGH SCORE: " + roundScore(display_high_score);
 		}
-		scoreUI.scoreText.text = roundScore(display_score);
-		endHighScoreUI.scoreText.text = "HIGH SCORE: " + roundScore(display_high_score);
 	}
 	
 	// Update is called once per frame
 	public void endGame() {
+		gameEnded = true;
+
 		// Display UI & Block Control
 		canvasGroup.interactable = true;
 		canvasGroup.blocksRaycasts = true;
 		canvasGroup.alpha = 1f;
 		collector.GetComponent<SimpleCharacterControl>().enabled = false;
+		collector.GetComponent<Animator>().enabled = false;
 
 		// Calculate & Assign Scores
 		float timePassed = timer.timePassed;

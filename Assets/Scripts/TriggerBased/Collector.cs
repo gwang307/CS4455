@@ -5,20 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Collector : MonoBehaviour {
-	public int score = 0;
+	public int score;
 	public ScoreUI scoreUI;
     public AudioSource coinSound;
 
-    private void Start()
-    {
-        coinSound = GetComponent<AudioSource>();
-    }
+	void Start() {
+		score = 0;
+		coinSound = GetComponent<AudioSource>();
+	}
 
-    public void ReceiveCollectible(int collectibleScore) {
+	public void ReceiveCollectible(int collectibleScore) {
 		score += collectibleScore;
 		scoreUI.scoreText.text = roundScore(score);
         coinSound.Play();
-		
+
 	}
 
 	String roundScore(int score) {
