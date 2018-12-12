@@ -37,14 +37,14 @@ public class Chase : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // player is near
-        if (Vector3.Distance(player.position, this.transform.position) < 10)
+        if (Vector3.Distance(player.position, this.transform.position) < 30)
         {
             Vector3 direction = player.position - this.transform.position;
             direction.y = 0;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
             anim.SetBool("isWalking", true);
 
-            if (direction.magnitude > 5)
+            if (direction.magnitude > 2)
             {
                 this.transform.Translate(0, 0, 0.1f);
                 anim.SetBool("isAttacking", false);
