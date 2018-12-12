@@ -18,6 +18,7 @@ public class EndMenuToggle : MonoBehaviour {
 	private int display_high_score;
 	private float countDown;
 	private bool gameEnded;
+	private Canvas countdownCanvas;
 
 	void Awake() {
 		countDown = 180f;
@@ -27,6 +28,7 @@ public class EndMenuToggle : MonoBehaviour {
 		collector = GameObject.Find("MC2");
 		timer = GetComponent<Timer>();
 		gameEnded = false;
+		countdownCanvas = GameObject.Find("CountdownCanvas").GetComponent<Canvas>();
 	}
 
 	// Use this for initialization
@@ -66,6 +68,7 @@ public class EndMenuToggle : MonoBehaviour {
 		gameEnded = true;
 
 		// Display UI & Block Control
+		countdownCanvas.enabled = false;
 		canvasGroup.interactable = true;
 		canvasGroup.blocksRaycasts = true;
 		canvasGroup.alpha = 1f;
