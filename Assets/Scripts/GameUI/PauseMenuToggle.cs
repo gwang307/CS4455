@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class PauseMenuToggle : MonoBehaviour {
 
 	public CanvasGroup canvasGroup;
 	public EndMenuToggle endMenuToggle;
+	public PostProcessingBehaviour main_camera_ppb;
 
 	void Awake() {
 		canvasGroup = GetComponent<CanvasGroup>();
@@ -27,11 +29,13 @@ public class PauseMenuToggle : MonoBehaviour {
 				canvasGroup.blocksRaycasts = false;
 				canvasGroup.alpha = 0f;
 				Time.timeScale = 1f;
+				main_camera_ppb.enabled = !main_camera_ppb.enabled;
 			} else {
 				canvasGroup.interactable = true;
 				canvasGroup.blocksRaycasts = true;
 				canvasGroup.alpha = 1f;
 				Time.timeScale = 0f;
+				main_camera_ppb.enabled = !main_camera_ppb.enabled;
 			}
 		}
 	}
