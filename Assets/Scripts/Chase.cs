@@ -9,6 +9,7 @@ public class Chase : MonoBehaviour {
     public Transform player;
     //private NavMeshAgent nma;
     static Animator anim;
+    public AudioSource zombieSound;
 
     public GameObject[] waypoints;
     public int currWaypoint = -1;
@@ -30,6 +31,7 @@ public class Chase : MonoBehaviour {
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
+        zombieSound = GetComponent<AudioSource>();
         //nma = GetComponent<NavMeshAgent>();
         SetNextWaypoint();
 	}
@@ -43,6 +45,11 @@ public class Chase : MonoBehaviour {
             direction.y = 0;
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
             anim.SetBool("isWalking", true);
+
+            if (direction.magnitude < 10)
+            {
+                zombieSound.Play();
+            }
 
             if (direction.magnitude > 2)
             {
