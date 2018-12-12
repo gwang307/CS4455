@@ -7,14 +7,18 @@ using UnityEngine.UI;
 public class Collector : MonoBehaviour {
 	public int score;
 	public ScoreUI scoreUI;
+    public AudioSource coinSound;
 
 	void Start() {
 		score = 0;
+		coinSound = GetComponent<AudioSource>();
 	}
 
 	public void ReceiveCollectible(int collectibleScore) {
 		score += collectibleScore;
 		scoreUI.scoreText.text = roundScore(score);
+        coinSound.Play();
+
 	}
 
 	String roundScore(int score) {
@@ -25,4 +29,11 @@ public class Collector : MonoBehaviour {
 		else
 			return score.ToString();
 	}
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "coin") {
+    //        coinSound.Play();
+    //    }
+    //}
 }

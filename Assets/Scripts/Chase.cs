@@ -44,10 +44,13 @@ public class Chase : MonoBehaviour {
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
             anim.SetBool("isWalking", true);
 
-            if (direction.magnitude > 5)
+            if (direction.magnitude > 2)
             {
                 this.transform.Translate(0, 0, 0.1f);
                 anim.SetBool("isAttacking", false);
+                //player.position = player.position - player.position;
+                //player.transform.Translate(-136.98f, 8, 169.3f);
+                player.position = new Vector3(- 136.98f, 8, 169.3f);
             }
             else
             {
