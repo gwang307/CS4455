@@ -10,6 +10,7 @@ public class Chase : MonoBehaviour {
     Collector collector;
     //private NavMeshAgent nma;
     static Animator anim;
+    public AudioSource zombieSound;
 
     public GameObject[] waypoints;
     public int currWaypoint = -1;
@@ -31,6 +32,7 @@ public class Chase : MonoBehaviour {
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
+        zombieSound = GetComponent<AudioSource>();
         //nma = GetComponent<NavMeshAgent>();
         SetNextWaypoint();
         collector = GameObject.Find("MC2").GetComponent<Collector>();
@@ -46,6 +48,11 @@ public class Chase : MonoBehaviour {
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
             anim.SetBool("isWalking", true);
 
+            if (direction.magnitude < 10)
+            {
+                zombieSound.Play();
+            }
+
             if (direction.magnitude > 2)
             {
                 this.transform.Translate(0, 0, 0.1f);
@@ -57,9 +64,10 @@ public class Chase : MonoBehaviour {
             {
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isWalking", false);
-                player.position = new Vector3(-136.98f, 8, 169.3f);
+                player.position = new Vector3(-136.98f, 12, 169.3f);
                 collector.score = Mathf.Max(collector.score - 500, 0);
                 collector.updateScoreUI();
+                
             }
         }
         // player far; chase balls
